@@ -11,7 +11,7 @@ lazy val scalaMeta         = "1.0.0"
 
 lazy val server = (project in file("."))
   .settings(
-    name         := "Necro",
+    name         := "Nekro",
     scalaVersion := scala3Version,
     organization := nekotech,
     libraryDependencies ++= Seq(

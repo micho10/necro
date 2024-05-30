@@ -1,10 +1,10 @@
-package com.nekotech.rikusho
+package com.nekotech.nekro
 
 import cats.effect.{IO, IOApp}
 import cats.implicits.*
-import com.nekotech.rikusho.config.EmberConfig
-import com.nekotech.rikusho.config.Syntax.loadF
-import com.nekotech.rikusho.http.HttpApi
+import com.nekotech.nekro.config.EmberConfig
+import com.nekotech.nekro.config.Syntax.loadF
+import com.nekotech.nekro.http.HttpApi
 import org.http4s.ember.server.EmberServerBuilder
 import pureconfig.ConfigSource
 
@@ -25,7 +25,7 @@ object Application extends IOApp.Simple:
         .withPort(config.port)
         .withHttpApp(HttpApi[IO].endpoints.orNotFound)
         .build
-        .use(_ => IO.println("Rikushokan!") *> IO.never)
+        .use(_ => IO.println("Let's play Necromunda!!") *> IO.never)
     }
 
 

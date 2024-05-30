@@ -1,4 +1,4 @@
-package com.nekotech.rikusho.playground
+package com.nekotech.nekro.playground
 
 object SimplePlayground {
   def main(args: Array[String]): Unit = {

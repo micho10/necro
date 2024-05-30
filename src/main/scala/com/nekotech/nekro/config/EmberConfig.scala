@@ -1,4 +1,4 @@
-package com.nekotech.rikusho.config
+package com.nekotech.nekro.config
 
 import com.comcast.ip4s.{Host, Port}
 import pureconfig.ConfigReader

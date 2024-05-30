@@ -1,4 +1,4 @@
-package com.nekotech.rikusho.http.routes
+package com.nekotech.nekro.http.routes
 
 import cats.*
 import cats.implicits.*
