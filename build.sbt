@@ -5,6 +5,8 @@ lazy val scala3Version = "3.4.2"
 
 // Dependencies version
 lazy val catsEffectVersion = "3.5.3"
+lazy val circeVersion      = "0.14.7"
+lazy val fs2CirceVersion   = "1.11.0"
 lazy val http4sVersion     = "0.23.27"
 lazy val pureConfigVersion = "0.17.6"
 lazy val scalaMeta         = "1.0.0"
@@ -20,6 +22,16 @@ lazy val server = (project in file("."))
        * in a purely functional style within the Typelevel ecosystem.
        */
       "org.typelevel"         %% "cats-effect"         % catsEffectVersion,
+      /**
+       * This module provides Builder and Tokenizer instances for the circe JSON type and a Tokenizer instance
+       * for each type T having an implicit Encoder[T] in scope.
+       */
+      "org.gnieh"             %% "fs2-data-json-circe" % fs2CirceVersion,
+//      "co.fs2" % "fs2-core_3" % "3.10.2",
+      /**
+       * JSON library for Scala
+       */
+      "io.circe"              %% "circe-generic"       % circeVersion,
       /**
        * Provides Circe codecs for http4s
        */

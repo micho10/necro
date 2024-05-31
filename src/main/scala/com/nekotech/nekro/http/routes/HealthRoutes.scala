@@ -21,7 +21,7 @@ class HealthRoutes[F[_]: Monad] private extends Http4sDsl[F]:
    *
    * This is how endpoints are exposed.
    */
-  val routes = Router (
+  val routes: HttpRoutes[F] = Router (
     "/health" -> healthRoute
   )
 

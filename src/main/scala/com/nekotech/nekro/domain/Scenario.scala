@@ -8,8 +8,6 @@ object Scenario {
                   id: UUID,
                   fluff: Option[String],
                   subtitle: Option[String],
-                  date: Long,
-                  ownerEmail: String,
                   scenarioInfo: ScenarioInfo,
                   active: Boolean = false
                 )

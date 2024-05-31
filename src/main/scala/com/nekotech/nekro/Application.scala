@@ -12,7 +12,7 @@ object Application extends IOApp.Simple:
 
   // 'default' means default config file in the resources directory (that's application.conf)
   // pureconfig will return errors on the left and config on the right
-//  val configSource = ConfigSource.default.load[EmberConfig]
+  val configSource = ConfigSource.default.load[EmberConfig]
 
   // Ember is part of Http4s
   // HTTP API decorated with a function in case it doesn't match the supported endpoints
@@ -27,6 +27,3 @@ object Application extends IOApp.Simple:
         .build
         .use(_ => IO.println("Let's play Necromunda!!") *> IO.never)
     }
-
-
-
