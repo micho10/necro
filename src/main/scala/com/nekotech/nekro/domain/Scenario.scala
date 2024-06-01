@@ -1,9 +1,12 @@
 package com.nekotech.nekro.domain
 
+//import io.circe.generic.JsonCodec
+
 import java.util.UUID
 
-object Scenario {
+object Scenario:
 
+  //@JsonCodec
   case class Scenario(
                   id: UUID,
                   fluff: Option[String],
@@ -11,7 +14,8 @@ object Scenario {
                   scenarioInfo: ScenarioInfo,
                   active: Boolean = false
                 )
-
+  
+  //@JsonCodec
   case class ScenarioInfo(
                       battleType: String,
                       battlefield: String,
@@ -27,9 +31,7 @@ object Scenario {
                       attackerDefender: Option[String],
                       other: Option[String]
                     )
-
+  
   object ScenarioInfo:
     val empty: ScenarioInfo =
       ScenarioInfo("", "", "", "", "", "", "", List.empty, None, None, None, None, None)
-
-}
