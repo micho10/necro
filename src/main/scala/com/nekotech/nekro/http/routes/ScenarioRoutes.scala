@@ -1,15 +1,15 @@
 package com.nekotech.nekro.http.routes
 
 // It must be imported 1st to avoid issues with implicits
-//import io.circe.generic.auto.*
-import fs2.data.json.*
-import fs2.data.json.circe.*
+import io.circe.generic.auto.*
 
 import cats.*
 import cats.effect.*
 import cats.implicits.*
 import com.nekotech.nekro.domain.Scenario.{Scenario, ScenarioInfo}
 import com.nekotech.nekro.http.responses.FailureResponse
+import org.http4s.circe.CirceEntityCodec.circeEntityEncoder
+import org.http4s.circe.CirceEntityDecoder.circeEntityDecoder
 import org.http4s.HttpRoutes
 import org.http4s.dsl.Http4sDsl
 import org.http4s.server.Router
