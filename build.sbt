@@ -1,15 +1,15 @@
 ThisBuild / version := "0.1.0-SNAPSHOT"
 
 lazy val nekotech      = "com.nekotech"
-lazy val scala3Version = "3.4.2"
+lazy val scala3Version = "3.5.1"
 
 // Dependencies version
 lazy val catsEffectVersion = "3.5.4"
-lazy val circeVersion      = "0.14.7"
-lazy val fs2CirceVersion   = "1.11.0"
-lazy val http4sVersion     = "0.23.27"
-lazy val pureConfigVersion = "0.17.6"
-lazy val scalaMeta         = "1.0.0"
+lazy val circeVersion      = "0.14.10"
+lazy val fs2CirceVersion   = "1.11.1"
+lazy val http4sVersion     = "0.23.28"
+lazy val pureConfigVersion = "0.17.7"
+lazy val scalaMeta         = "1.0.2"
 
 lazy val server = (project in file("."))
   .settings(

@@ -13,7 +13,10 @@ import pureconfig.generic.derivation.default.*
  *                     -------------------------
  *                     This can be derived automatically from the config library
  *
- * Derives => The library pureconfig can automatically generate a ConfigReader of the particular type we need
+ * derives ConfigReader => The library pureconfig can automatically generate a ConfigReader of the particular type
+ *    we need, but it only works if Host and Port already have a ConfigReader instance
+ *
+ * Since Host and Port are custom types (not simple String or Int types), a custom ConfigReader must be defined for each
  *
  * This emberConfig must be obtained and passed to the EmberServerBuilder
  *
